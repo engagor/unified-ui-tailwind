@@ -31,5 +31,4 @@ This will update version numbers, create a Github release and create a new versi
 
 ## License
 ````
-See license at LICENSE.txt
-
+See license at LICENSE

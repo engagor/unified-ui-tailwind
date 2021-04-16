@@ -5,7 +5,6 @@
     "main": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "tailwind-config-viewer": "tailwind-config-viewer -o",
         "prebuild": "rm -rf ./dist",
         "build": "postcss ./src/*.pcss -d ./dist --ext css",
         "prepublish": "npm run build",
