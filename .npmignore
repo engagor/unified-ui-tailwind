@@ -1,0 +1,20 @@
+# generated sass/css files
+src/
+
+postcss.config.js
+tailwind.config.js
+.editorconfig
+.gitignore
+
+# mac files
+*.DS_Store
+
+.sync
+
+# IDEs
+\.sublime-workspace
+*.sublime-workspace
+.vscode
+.idea/
+.idea
+.tags*

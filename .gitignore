@@ -1,0 +1,19 @@
+# generated sass/css files
+dist/
+
+# mac files
+*.DS_Store
+
+.idea/
+.idea
+.tags*
+
+.sync
+
+# IDEs
+\.sublime-workspace
+*.sublime-workspace
+.vscode
+
+/tmp/webpack
+/node_modules
