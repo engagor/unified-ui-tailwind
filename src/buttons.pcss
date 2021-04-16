@@ -2,9 +2,6 @@
     .btn {
         @apply
             text-center
-            text-white
-            bg-charcoal-color-600
-            border-charcoal-color-600
             transition-colors
             border-solid
             border-2
@@ -17,33 +14,71 @@
         ;
     }
 
-    .btn:hover {
+    .btn--disabled {
         @apply
-            bg-transparent
-            text-charcoal-color-600
+            cursor-default
+            opacity-25
+            pointer-events-none
         ;
     }
 
-    .btn--disabled {
+    .btn--default {
+        @apply
+            text-white
+            bg-charcoal-color-600
+            border-charcoal-color-600
+        ;
+    }
+
+    .btn--default:hover {
         @apply
             bg-transparent
             text-charcoal-color-600
-            cursor-default
-            opacity-25
         ;
     }
 
     .btn--primary {
         @apply
+            text-white
             bg-primary-color-400
             border-primary-color-400
         ;
     }
 
-    .hover\:btn--primary:hover {
+    .btn--primary:hover {
         @apply
             bg-transparent
             text-primary-color-400
+        ;
+    }
+
+    .btn--secondary {
+        @apply
+            text-charcoal-color-400
+            bg-transparent
+            border-charcoal-color-400
+        ;
+    }
+
+    .btn--secondary:hover {
+        @apply
+            text-primary-color-400
+            border-primary-color-400
+        ;
+    }
+
+    .btn--danger {
+        @apply
+            text-white
+            bg-danger-400
+            border-danger-400
+        ;
+    }
+
+    .btn--danger:hover {
+        @apply
+            text-danger-400
+            bg-transparent
         ;
     }
 

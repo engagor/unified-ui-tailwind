@@ -25,6 +25,7 @@ module.exports = {
         'borderColor',
         'borderRadius',
         'cursor',
+        'pointerEvents',
         'float',
         'clear',
         'textAlign',
