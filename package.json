@@ -1,8 +1,8 @@
 {
-    "name": "unified-ui-tailwind",
+    "name": "@clarabridge/unified-ui-tailwind",
     "version": "0.0.1",
-    "description": "",
-    "main": "index.css",
+    "description": "Tailwind implementation of our Unified UI configuration",
+    "main": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "tailwind-config-viewer": "tailwind-config-viewer -o",
@@ -20,7 +20,20 @@
         "type": "git",
         "url": "git+https://github.com/engagor/unified-ui-tailwind.git"
     },
-    "author": "",
+    "authors": [
+        {
+            "name": "Thomas Van Kerckvoorde",
+            "email": "thomas.vankerckvoorde@clarabridge.com",
+            "homepage": "https://github.com/thaoms",
+            "role": "Developer"
+        },
+        {
+            "name": "Cédric D'hooge",
+            "email": "cedric.dhooge@engagor.com",
+            "homepage": "https://github.com/cedricengagor",
+            "role": "Developer"
+        }
+    ],
     "license": "SEE LICENSE IN LICENSE",
     "bugs": {
         "url": "https://github.com/engagor/unified-ui-tailwind/issues"
