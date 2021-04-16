@@ -41,6 +41,7 @@ module.exports = {
         'fontSize',
         'lineHeight',
         'transitionProperty',
+        'boxSizing',
     ],
     purge: [],
     important: true,
@@ -61,7 +62,7 @@ module.exports = {
             (accumulator[border] = border + 'px', accumulator), {}),
         fontFamily: config.FONT.FAMILIES,
         fontSize: config.FONT.SIZES,
-        lineHeight: config.FONT.SIZES,
+        lineHeight: { ...config.FONT.SIZES, '0': 0 },
     },
     variants: {
         backgroundColor: [
