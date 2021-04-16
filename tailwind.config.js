@@ -26,6 +26,7 @@ module.exports = {
         'borderRadius',
         'cursor',
         'pointerEvents',
+        'outline',
         'float',
         'clear',
         'textAlign',
