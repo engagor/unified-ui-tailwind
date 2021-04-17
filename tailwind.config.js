@@ -3,10 +3,14 @@ const config = require('@clarabridge/unified-ui/src/configuration');
 module.exports = {
     corePlugins: [
         'backgroundColor',
+        'boxShadow',
         'opacity',
+        'visibility',
         'padding',
         'margin',
         'position',
+        'inset',
+        'zIndex',
         'flex',
         'flexDirection',
         'flexGrow',
@@ -38,8 +42,15 @@ module.exports = {
         'fontFamily',
         'fontSize',
         'lineHeight',
+        'letterSpacing',
+        'textOverflow',
         'transitionProperty',
         'outline',
+        'pointerEvents',
+        'appearance',
+        'tableLayout',
+        'borderCollapse',
+        'listStyleType'
     ],
     purge: [],
     important: true,
@@ -68,6 +79,11 @@ module.exports = {
             '75': '.75',
             '100': '1',
         },
+        extend: {
+            inset: {
+                '0': 0,
+            },
+        }
     },
     variants: {
         textColor:['hover'],
@@ -79,6 +95,8 @@ module.exports = {
         maxWidth: [],
         borderColor: [],
         outline: ['focus', 'active'],
+        boxShadow: [],
+        zIndex: [],
     },
     plugins: [],
 }
