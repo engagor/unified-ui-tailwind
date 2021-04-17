@@ -39,6 +39,7 @@ module.exports = {
         'fontSize',
         'lineHeight',
         'transitionProperty',
+        'outline',
     ],
     purge: [],
     important: true,
@@ -60,18 +61,24 @@ module.exports = {
         fontFamily: config.FONT.FAMILIES,
         fontSize: config.FONT.SIZES,
         lineHeight: config.FONT.SIZES,
+        opacity: {
+            '0': '0',
+            '25': '.25',
+            '50': '.5',
+            '75': '.75',
+            '100': '1',
+        },
     },
     variants: {
-        backgroundColor: [
-            'hover'
-        ],
-        opacity: [
-            'hover'
-        ],
+        textColor:['hover'],
+        textDecoration: ['hover'],
+        backgroundColor: ['hover'],
+        opacity: ['hover'],
         padding: [],
         margin: [],
         maxWidth: [],
         borderColor: [],
+        outline: ['focus', 'active'],
     },
     plugins: [],
 }
