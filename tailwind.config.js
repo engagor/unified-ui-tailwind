@@ -45,6 +45,7 @@ module.exports = {
         'letterSpacing',
         'textOverflow',
         'transitionProperty',
+        'boxSizing',
         'outline',
         'pointerEvents',
         'appearance',
@@ -80,7 +81,13 @@ module.exports = {
             '100': '1',
         },
         extend: {
+            lineHeight: {
+                '0': 0
+            },
             inset: {
+                '0': 0,
+            },
+            borderWidth: {
                 '0': 0,
             },
         }
