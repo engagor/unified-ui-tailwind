@@ -1,0 +1,82 @@
+@layer components {
+    .modal {
+        @apply
+            static
+            flex
+            flex-col
+            p-0
+            border-0
+            shadow-lg
+            min-h-400
+            max-h-60-vh
+            !important
+        ;
+    }
+
+    .modal--small {
+        @apply w-600 !important;
+    }
+
+    .modal--medium {
+        @apply w-800 !important;
+    }
+
+    .modal--large {
+        @apply w-1000 !important;
+    }
+
+    .modal__header {
+        @apply
+            p-16
+            text-white
+            text-base
+            leading-base
+            flex
+            justify-between
+        ;
+    }
+
+    .modal__header--default {
+        @apply bg-charcoal-color-400;
+    }
+
+    .modal__header--warning {
+        @apply bg-warning-400;
+    }
+
+    .modal__header--danger {
+        @apply bg-danger-400;
+    }
+
+    .modal__header__dismiss {
+        @apply
+            p-0
+            bg-transparent
+            border-none
+            text-white
+            text-base
+            leading-base
+            cursor-pointer
+        ;
+    }
+
+    .modal__body {
+        @apply
+            bg-white
+            p-16
+            overflow-y-auto
+            flex-1
+        ;
+    }
+
+    .modal__footer {
+        @apply
+            p-16
+            flex
+            border-0
+            border-t-2
+            border-solid
+            border-charcoal-color-100
+        ;
+    }
+}

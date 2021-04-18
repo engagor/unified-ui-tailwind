@@ -1,5 +1,16 @@
 const config = require('@clarabridge/unified-ui/src/configuration');
 
+const spacingTheme = config.SPACING.reduce((accumulator, spacing) => (accumulator[spacing] = spacing + 'px', accumulator), {});
+
+const widthsAndHeightsTheme = {
+    ...config.WIDTHS_AND_HEIGHTS.PIXEL.reduce((accumulator, dimension) =>
+        (accumulator[dimension] = dimension + 'px', accumulator), {}),
+    ...config.WIDTHS_AND_HEIGHTS.PERCENT.reduce((accumulator, dimension) =>
+        (accumulator[dimension+'-percent'] = dimension + '%', accumulator), {}),
+    ...config.WIDTHS_AND_HEIGHTS.VIEWPORT.reduce((accumulator, dimension) =>
+        (accumulator[dimension+'-vh'] = dimension + 'vh', accumulator), {}),
+};
+
 module.exports = {
     corePlugins: [
         'backgroundColor',
@@ -19,7 +30,12 @@ module.exports = {
         'justifySelf',
         'alignSelf',
         'display',
+        'width',
+        'minWidth',
         'maxWidth',
+        'height',
+        'minHeight',
+        'maxHeight',
         'borderStyle',
         'borderWidth',
         'borderColor',
@@ -42,6 +58,8 @@ module.exports = {
         'lineHeight',
         'transitionProperty',
         'boxSizing',
+        'boxShadow',
+        'overflow',
     ],
     purge: [],
     important: true,
@@ -49,32 +67,36 @@ module.exports = {
     theme: {
         screens: false,
         colors: config.COLORS,
-        spacing: config.SPACING.reduce((accumulator, spacing) => (accumulator[spacing] = spacing + 'px', accumulator), {}),
-        maxWidth: {
-            ...config.WIDTHS_AND_HEIGHTS.PERCENT.reduce((accumulator, dimension) =>
-                (accumulator[dimension+'-percent'] = dimension + '%', accumulator), {}),
-            ...config.WIDTHS_AND_HEIGHTS.PIXEL.reduce((accumulator, dimension) =>
-                (accumulator[dimension] = dimension + 'px', accumulator), {}),
-        },
-        borderWidth: config.BORDERS.reduce((accumulator, border) =>
-            (accumulator[border] = border + 'px', accumulator), {}),
-        borderRadius: config.BORDERS.reduce((accumulator, border) =>
-            (accumulator[border] = border + 'px', accumulator), {}),
+        padding: spacingTheme,
+        margin: spacingTheme,
+        width: widthsAndHeightsTheme,
+        minWidth: widthsAndHeightsTheme,
+        maxWidth: widthsAndHeightsTheme,
+        height: widthsAndHeightsTheme,
+        minHeight: widthsAndHeightsTheme,
+        maxHeight: widthsAndHeightsTheme,
+        borderWidth: config.BORDERS.reduce((accumulator, border) => (accumulator[border] = border + 'px', accumulator), {}),
+        borderRadius: config.BORDERS.reduce((accumulator, border) => (accumulator[border] = border + 'px', accumulator), {}),
         fontFamily: config.FONT.FAMILIES,
         fontSize: config.FONT.SIZES,
         lineHeight: { ...config.FONT.SIZES, '0': 0 },
     },
     variants: {
-        backgroundColor: [
-            'hover'
-        ],
-        opacity: [
-            'hover'
-        ],
+        textColor: ['hover'],
+        backgroundColor: ['hover'],
+        borderColor: ['hover'],
+        opacity: ['hover'],
         padding: [],
         margin: [],
+        width: [],
+        minWidth: [],
         maxWidth: [],
-        borderColor: [],
+        height: [],
+        minHeight: [],
+        maxHeight: [],
+        outline:[],
+        textDecoration:[],
+        boxShadow: [],
     },
     plugins: [],
 }
