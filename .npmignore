@@ -18,3 +18,4 @@ tailwind.config.js
 .idea/
 .idea
 .tags*
+.nvmrc
