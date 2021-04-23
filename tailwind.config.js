@@ -113,6 +113,9 @@ module.exports = {
             margin: {
                 '0': 0,
             },
+            width: {
+                'full': '100%'
+            },
         }
     },
     variants: {
