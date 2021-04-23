@@ -76,7 +76,7 @@ module.exports = {
     darkMode: 'class',
     theme: {
         screens: false,
-        colors: config.COLORS,
+        colors: Object.keys(config.COLORS).reduce((accumulator, color) => (accumulator[color] = `var(--${color})`, accumulator), {}),
         padding: spacingTheme,
         margin: spacingTheme,
         width: widthsAndHeightsTheme,
