@@ -73,7 +73,7 @@ module.exports = {
     corePlugins: [...new Set(corePlugins)],
     purge: [],
     important: true,
-    darkMode: false,
+    darkMode: 'class',
     theme: {
         screens: false,
         colors: config.COLORS,
@@ -107,13 +107,19 @@ module.exports = {
             borderWidth: {
                 '0': 0,
             },
+            padding: {
+                '0': 0,
+            },
+            margin: {
+                '0': 0,
+            },
         }
     },
     variants: {
-        textColor: ['hover'],
-        textDecoration: ['hover'],
-        backgroundColor: ['hover'],
-        borderColor: ['hover'],
+        textColor: ['hover', 'dark'],
+        textDecoration: ['hover', 'dark'],
+        backgroundColor: ['hover', 'dark'],
+        borderColor: ['hover', 'dark'],
         opacity: ['hover'],
         padding: [],
         margin: [],
@@ -123,8 +129,8 @@ module.exports = {
         height: [],
         minHeight: [],
         maxHeight: [],
-        boxShadow: [],
-        outline: ['focus', 'active'],
+        boxShadow: ['dark'],
+        outline: ['focus', 'active', 'dark'],
         zIndex: [],
     },
     plugins: [],

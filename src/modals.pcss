@@ -9,6 +9,8 @@
             shadow-lg
             min-h-400
             max-h-60-vh
+            rounded-2
+            overflow-hidden
             !important
         ;
     }
@@ -33,19 +35,20 @@
             leading-base
             flex
             justify-between
+            !important;
         ;
     }
 
     .modal__header--default {
-        @apply bg-charcoal-color-400;
+        @apply bg-charcoal-color-400 !important;;
     }
 
     .modal__header--warning {
-        @apply bg-warning-400;
+        @apply bg-warning-400 !important;;
     }
 
     .modal__header--danger {
-        @apply bg-danger-400;
+        @apply bg-danger-400 !important;;
     }
 
     .modal__header__dismiss {
@@ -57,26 +60,33 @@
             text-base
             leading-base
             cursor-pointer
+            !important;
         ;
     }
 
     .modal__body {
         @apply
             bg-white
+            dark:bg-charcoal-color-500
             p-16
             overflow-y-auto
             flex-1
+            !important;
         ;
     }
 
     .modal__footer {
         @apply
+            bg-white
+            dark:bg-charcoal-color-500
             p-16
             flex
             border-0
             border-t-2
             border-solid
             border-charcoal-color-100
+            dark:border-white
+            !important;
         ;
     }
 }
